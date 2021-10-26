@@ -1,6 +1,120 @@
-.hello {
-    color: red;
-  }
-  body {
-    background-color: bisque;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* ul li {
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f6f6f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3f4249;
+  line-height: 20px;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
+}
+
+.main-container > *,
+.item-list li {
+  padding: 12px;
+  border-bottom: 2px solid #e7ebebb2;
+  background-color: #fff;
+}
+
+.item-list > *:last-child {
+  background-color: transparent;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.item-list li {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  align-items: center;
+}
+
+.item-list li .description {
+  margin-left: 10px;
+  color: rgb(27, 27, 27);
+}
+
+.item-list li.done .description {
+  text-decoration: line-through;
+  color: black;
+}
+
+.material-icons {
+  opacity: 0.6;
+}
+
+.heading,
+.add-task {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+}
+
+.heading {
+  color: #34353a;
+  font-size: 17px;
+}
+
+.add-task input,
+.add-task input:focus {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.add-task input::placeholder {
+  font-style: italic;
+  font-size: 16px;
+}
+
+#todos {
+  background-color: #fff;
+  padding: 2px;
+}
+
+button {
+  border: none;
+}
+
+.main-container .clearbtn {
+  width: 99%;
+  background-color: #f6f6f6;
+  color: #3f4249;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.main-container .clearbtn:hover {
+  opacity: 0.9;
+  text-decoration: underline;
 }
