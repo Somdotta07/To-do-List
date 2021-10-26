@@ -30,7 +30,7 @@ A simple yet powerful to-do list, inspired by the minimalist website.
 ## Getting Started
 
 **To clone this project**
-**Run command: $git clone https://github.com/Somdotta07/To-do-List.git**
+**Run command: $git clone the reposiratory**
 **or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 
 ## Prerequisites
