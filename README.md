@@ -1,6 +1,7 @@
 # To-do-list
 
 A simple yet powerful to-do list, inspired by the minimalist website.
+![image](https://user-images.githubusercontent.com/84907743/138916952-4af23a3e-0b34-47b7-ba59-f72aed7bfde0.png)
 
 ## Live Demo
 
