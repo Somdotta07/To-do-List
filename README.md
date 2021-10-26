@@ -34,9 +34,10 @@ A simple yet powerful to-do list, inspired by the minimalist website.
 **or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 **To setup the webpack for this project**
 #### Install Webpack
-- Follow the instructions from the getting started guide to set up the basics. Implement all the steps from Basic Setup to NPM Scripts.
-- install the HtmlWebpackPlugin to automatically create the index.html file in the /dist directory
-- Follow the instructions from the setting up HtmlWebpackPlugin guide. Be extra careful when updating the module.exports object in your webpack.config.js file, to not to make any nesting mistakes.Then
+- Follow the instructions from the [getting started](https://webpack.js.org/guides/getting-started/#basic-setup) guide to set up the basics. Implement all the steps from *Basic Setup* to *NPM Scripts*.
+- The next step is to add html file :
+    Follow the instructions from the [setting up HtmlWebpackPlugin](https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin) guide
+Then
 ```
 npm run build
 ```
@@ -52,7 +53,7 @@ plugins: [
 ],
 ```
 - Run `npm run build` to update the **/dist/index.html**.
--The next step in building your webpack boilerplate is to add some style to it.
+- Then it is time to add some style to the project:
 Follow the steps in [loading CSS](https://webpack.js.org/guides/asset-management/#loading-css) guide.
 Next, execute `npm run build` and check if the HTML body style has changed.
 #### Setup local dev server
