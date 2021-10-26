@@ -32,6 +32,31 @@ A simple yet powerful to-do list, inspired by the minimalist website.
 **To clone this project**
 **Run command: $git clone the reposiratory**
 **or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
+**To setup the webpack for this project**
+#### Install Webpack
+- Follow the instructions from the getting started guide to set up the basics. Implement all the steps from Basic Setup to NPM Scripts.
+- install the HtmlWebpackPlugin to automatically create the index.html file in the /dist directory
+- Follow the instructions from the setting up HtmlWebpackPlugin guide. Be extra careful when updating the module.exports object in your webpack.config.js file, to not to make any nesting mistakes.Then
+```
+npm run build
+```
+- Create a **/src/index.html** for writing the project
+
+- Then modify **webpack.config.js** to point HtmlWebpackPlugin towards your template file:
+```javascript
+plugins: [
+  new HtmlWebpackPlugin({
+-   title: 'Output Management',
++   template: './src/index.html'
+  }),
+],
+```
+- Run `npm run build` to update the **/dist/index.html**.
+-The next step in building your webpack boilerplate is to add some style to it.
+Follow the steps in [loading CSS](https://webpack.js.org/guides/asset-management/#loading-css) guide.
+Next, execute `npm run build` and check if the HTML body style has changed.
+#### Setup local dev server
+- Finally,follow the [using webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server) guide and set it up on your local machine.
 
 ## Prerequisites
 
