@@ -45,7 +45,7 @@ function newTask(task) {
   value="false" 
   name="completeTask" 
   class="check-box">
-  <p data-referTo="${index}" class="description">${description}</p>
+  <p contenteditable="true" data-referTo="${index}" class="description">${description}</p>
   <span data-referTo="${index}" class="material-icons">
   more_vert
   </span>`;
