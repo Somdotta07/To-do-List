@@ -44,18 +44,18 @@ body {
   padding: 0;
 }
 
-.item-list li {
+.item-list .to-do-list {
   display: grid;
   grid-template-columns: 5% 90% 5%;
   align-items: center;
 }
 
-.item-list li .description {
+.to-do-list .description {
   margin-left: 10px;
   color: rgb(27, 27, 27);
 }
 
-.item-list li.done .description {
+.to-do-list .description .checked {
   text-decoration: line-through;
   color: black;
 }
@@ -92,7 +92,7 @@ body {
   font-size: 16px;
 }
 
-#todos {
+#add-todos {
   background-color: #fff;
   padding: 2px;
 }
