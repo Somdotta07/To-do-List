@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-bottom: 1px solid rgb(165, 165, 165);
+}
+
 * ul li {
   list-style-type: none;
 }
@@ -27,15 +35,30 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 8px;
 }
 
+/* ul {
+  padding: 0;
+  margin: 0;
+} */
+
 .main-container > *,
-.item-list li {
+ul li {
   padding: 12px;
   border-bottom: 2px solid #e7ebebb2;
   background-color: #fff;
 }
 
-.item-list > *:last-child {
+ul > *:last-child {
   background-color: transparent;
+}
+
+.add-task input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 ul li .list-con input {
@@ -47,17 +70,14 @@ ul li .list-con input {
   position: relative;
 }
 
-ul {
-  padding: 0;
+.add-task input:focus {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 12px 20px;
   margin: 0;
-}
-
-li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
-  border-bottom: 1px solid rgb(165, 165, 165);
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 ul li .list-con {
@@ -84,7 +104,7 @@ ul li .list-con input:checked {
   background-color: rgb(24, 155, 24);
 }
 
-ul li .list-con input:checked::after{
+ul li .list-con input:checked::after {
   display: block;
   text-decoration: line-through;
 }
@@ -92,11 +112,11 @@ ul li .list-con input:checked::after{
 ul li .list-con p {
   color: #34353a;
   font-size: 18px;
+
   /* text-decoration: line-through; */
 }
 
-.linethrough
-{
+.linethrough {
   text-decoration: line-through;
 }
 
@@ -114,17 +134,6 @@ ul li .list-con p {
 .heading {
   color: #34353a;
   font-size: 17px;
-}
-
-.add-task input,
-.add-task input:focus {
-  border: none;
-  outline: none;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 0;
-  display: inline-block;
-  box-sizing: border-box;
 }
 
 .add-task input::placeholder {

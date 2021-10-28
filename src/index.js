@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+
 import './style.css';
 import interactive from './interactive.js';
 
@@ -81,18 +81,3 @@ const getList = () => {
   }
 };
 getList();
-
-// const checkBoxes = document.querySelectorAll('input[type=checkbox]');
-// // const pTag = document.querySelector('.text');
-// checkBoxes.forEach((checkBox) => {
-//   checkBox.addEventListener('change', () => {
-//     const eleInd = checkBox.getAttribute('id');
-//     if (task[eleInd].completed === true) {
-//       task[eleInd].completed = false;
-//       document.querySelector(eleInd).classList.remove('linethrough');
-//     } else {
-//       task[eleInd].completed = true;
-//       document.querySelector(eleInd).classList.add('linethrough');
-//     }
-//   });
-// });

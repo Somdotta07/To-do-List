@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 
 export default function interactive(event) {
   const task = JSON.parse(localStorage.getItem('task'));
