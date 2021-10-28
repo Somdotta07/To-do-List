@@ -1,4 +1,3 @@
-
 export default function interactive(event) {
   const task = JSON.parse(localStorage.getItem('task'));
   const text = event.currentTarget.nextElementSibling;
