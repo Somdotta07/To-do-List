@@ -95,9 +95,10 @@ ul li .list-con p {
   /* text-decoration: line-through; */
 }
 
-/* p {
+.linethrough
+{
   text-decoration: line-through;
-} */
+}
 
 .material-icons {
   opacity: 0.6;
