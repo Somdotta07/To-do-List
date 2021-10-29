@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import './style.css';
 import interactive from './interactive.js';
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
@@ -25,10 +24,12 @@ const getList = () => {
     // List
     const list = document.createElement('li');
     itemContainer.appendChild(list);
+
     // Inside List create a div
     const listContainer = document.createElement('div');
     listContainer.classList.add('list-con');
     list.appendChild(listContainer);
+
     // Input checkBox
     const checkBox = document.createElement('input');
     checkBox.setAttribute('type', 'checkbox');
@@ -37,8 +38,6 @@ const getList = () => {
     listContainer.appendChild(checkBox);
     // Text item
     const description = document.createElement('p');
-    description.classList.add('text');
-    description.setAttribute('id', task[i].index);
     description.textContent = task[i].description;
     listContainer.appendChild(description);
     // input for paragraph
@@ -48,13 +47,13 @@ const getList = () => {
     editPara.setAttribute('type', 'text');
     editPara.addEventListener('blur', (e) => {
       editText(e.currentTarget.value, i);
-      getList();
+      // console.log('he');
     });
     listContainer.appendChild(editPara);
     if (task[i].completed) {
       description.classList.add('linethrough');
     }
-
+    // Icon
     const verIcon = document.createElement('i');
     verIcon.classList.add('fas');
     verIcon.classList.add('fa-ellipsis-v');
@@ -88,9 +87,8 @@ clearBtn.addEventListener('click', () => {
 
 const autorenew = document.querySelector('.material-icons');
 autorenew.addEventListener('click', () => {
-  localStorage.clear();
-  // window.location.reload();
-  console.log('hello');
+  window.location.reload();
+  window.localStorage.remove(task);
 });
 
 document.addEventListener('click', (e) => {

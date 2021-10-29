@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 
 export default function interactive(event) {

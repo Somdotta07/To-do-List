@@ -108,6 +108,7 @@ ul li .list-con input[type="checkbox"]:checked::after {
   display: block;
   text-decoration: line-through;
 }
+
 ul li .list-con input[type="text"] {
   width: 100%;
   border: none;
@@ -128,6 +129,7 @@ ul li i {
   cursor: pointer;
   color: aqua;
 }
+
 .material-icons {
   opacity: 0.6;
   cursor: pointer;

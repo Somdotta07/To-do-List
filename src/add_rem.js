@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 
 export function indexValue() {
@@ -54,7 +53,7 @@ export function deleteItem(index) {
 
 // Remove Line
 export function removeLine(e) {
-  const text = e.currentTarget.parentNode.querySelector('.lint-con p');
+  const text = e.currentTarget.parentNode.querySelector('.list-con p');
   const textInput = e.currentTarget.parentNode.querySelector('.list-con input[type="text"]');
   const textIcon = e.currentTarget.parentNode.querySelector('.fa-ellipsis-v');
   const trashIcon = e.currentTarget.parentNode.querySelector('.fa-trash-alt');
