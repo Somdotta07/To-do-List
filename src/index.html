@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <!-- <script src="https://kit.fontawesome.com/a3ad5bee92.js" crossorigin="anonymous"></script> -->
     <title>To-Do-List</title>
     </head>
 <body>
@@ -15,15 +16,15 @@
                 autorenew
                 </span>
         </div>
-        <div class="add-task">
+        <form class="add-task">
             <input type="text" name="add-task" id="add-item" class="add-item" placeholder="Add to your list...">
-            <button type="button" class ="material-icons" id="todos">
+            <button type="submit" class ="material-icons" id="add-btn">
                 keyboard_return
             </button>
-        </div>
+        </form>
         <ul class = "item-list">
         </ul>
-        <button type="button" class="clearbtn">Clear all completed</button>
+        <button type="submit" id= "clearbtn" class="clearbtn">Clear all completed</button>
         
     </div>
 </body>

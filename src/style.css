@@ -86,7 +86,7 @@ ul li .list-con {
   gap: 10px;
 }
 
-ul li .list-con input::after {
+ul li .list-con input[type="checkbox"]::after {
   content: "";
   position: absolute;
   top: 20%;
@@ -100,28 +100,37 @@ ul li .list-con input::after {
   display: none;
 }
 
-ul li .list-con input:checked {
+ul li .list-con input[type="checkbox"]:checked {
   background-color: rgb(24, 155, 24);
 }
 
-ul li .list-con input:checked::after {
+ul li .list-con input[type="checkbox"]:checked::after {
   display: block;
   text-decoration: line-through;
 }
+ul li .list-con input[type="text"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
 
-ul li .list-con p {
+/* ul li .list-con p {
   color: #34353a;
   font-size: 18px;
-
-  /* text-decoration: line-through; */
-}
+} */
 
 .linethrough {
   text-decoration: line-through;
 }
 
+ul li i {
+  cursor: pointer;
+  color: aqua;
+}
 .material-icons {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .heading,
@@ -166,4 +175,8 @@ button {
 .main-container .clearbtn:hover {
   opacity: 0.9;
   text-decoration: underline;
+}
+
+.none {
+  display: none;
 }
