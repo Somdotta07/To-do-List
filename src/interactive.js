@@ -1,7 +1,10 @@
+
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 
 export default function interactive(event) {
-  const task = getFromLocalStorage('task');
+  const task = getFromLocalStorage('task')
+export default function interactive(event) {
+  const task = JSON.parse(localStorage.getItem('task'));
   const text = event.currentTarget.nextElementSibling;
   const toDos = task.filter((task) => task.description === text.textContent)[0];
   const id = task.indexOf(toDos);
@@ -14,4 +17,7 @@ export default function interactive(event) {
   }
 
   addTOLocalStorage('task', task);
+}
+=======
+  localStorage.setItem('task', JSON.stringify(task));
 }
