@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 
 export function indexValue() {
@@ -35,6 +36,7 @@ export function editText(taskInput, index) {
   addTOLocalStorage('task', task);
 }
 // Clear complete button
+
 export function completeToDo() {
   let task = getFromLocalStorage('task');
   task = task.filter((task) => !task.completed);
@@ -46,8 +48,8 @@ export function completeToDo() {
 export function deleteItem(index) {
   let task = getFromLocalStorage('task');
   task = task.filter((task) => task.index !== task[index].index);
+  // console.log(task);
   addTOLocalStorage('task', task);
-  window.location.reload();
   indexValue();
 }
 

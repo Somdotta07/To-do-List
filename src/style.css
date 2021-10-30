@@ -87,7 +87,6 @@ ul li .list-con {
 }
 
 ul li .list-con input[type="checkbox"]::after {
- {
   content: "";
   position: absolute;
   top: 20%;
@@ -99,7 +98,6 @@ ul li .list-con input[type="checkbox"]::after {
   border-radius: 20%;
   transform: rotate(-45deg);
   display: none;
-
 }
 
 ul li .list-con input[type="checkbox"]:checked {
@@ -118,22 +116,13 @@ ul li .list-con input[type="text"] {
   font-size: 18px;
 }
 
-/* ul li .list-con p {
-  color: #34353a;
-  font-size: 18px;
-} */
-
-.linethrough {
-  text-decoration: line-through;
-}
-
 ul li i {
   cursor: pointer;
   color: aqua;
 }
 
 ul li .list-con input:checked {
-  background-color: rgb(24, 155, 24);
+  background-color: rgb(24, 74, 155);
 }
 
 ul li .list-con input:checked::after {

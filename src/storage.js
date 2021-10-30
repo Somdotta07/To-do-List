@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 export function addTOLocalStorage(taskName, task) {
   const str = JSON.stringify(task);
   localStorage.setItem(taskName, str);
