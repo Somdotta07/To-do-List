@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import './style.css';
 import interactive from './interactive.js';
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
