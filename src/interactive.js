@@ -1,5 +1,7 @@
+import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
+
 export default function interactive(event) {
-  const task = JSON.parse(localStorage.getItem('task'));
+  const task = getFromLocalStorage('task');
   const text = event.currentTarget.nextElementSibling;
   const toDos = task.filter((task) => task.description === text.textContent)[0];
   const id = task.indexOf(toDos);
@@ -11,5 +13,5 @@ export default function interactive(event) {
     text.classList.remove('linethrough');
   }
 
-  localStorage.setItem('task', JSON.stringify(task));
+  addTOLocalStorage('task', task);
 }
