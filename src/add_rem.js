@@ -47,8 +47,8 @@ export function completeToDo() {
 // Delete Item
 export function deleteItem(index) {
   let task = getFromLocalStorage('task');
-  task = task.filter((task) => task.index !== task[index].index);
-  // console.log(task);
+  const val = task.at(index).index;
+  task = task.filter((task) => (task.index !== val));
   addTOLocalStorage('task', task);
   indexValue();
 }
