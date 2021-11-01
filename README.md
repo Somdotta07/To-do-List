@@ -5,7 +5,7 @@ A simple yet powerful to-do list, inspired by the minimalist website.
 
 ## Live Demo
 
-[Live Demo Link](https://somdotta07.github.io/To-do-List/)
+[Live Demo Link]( https://somdotta07.github.io/To-do-List/)
 
 ## Built With
 
