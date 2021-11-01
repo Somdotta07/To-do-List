@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 
 export function indexValue() {
