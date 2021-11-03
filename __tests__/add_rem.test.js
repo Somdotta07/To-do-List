@@ -1,6 +1,4 @@
-/* eslint-disable linebreak-style */
-import {addToDo,deleteItem} from '../src/add_rem.js';
-describe('tests',()=>{
+describe('tests', () => {
   test('add the task', () => {
     // const taskList = [];
     // Arrange
@@ -27,12 +25,13 @@ describe('tests',()=>{
         index: taskList.length + 1,
       };
       taskList.push(taskElement);
-       return taskList.length;
+      // eslint-disable-next-line
+      return taskList.length; 
     });
     // Act
     expect(addToDoMocked(taskList, 'New Task')).toBe(3);
-  })
-  test('delteitem',() =>{
+  });
+  test('delteitem', () => {
     const tasks = [
       {
         description: 'Task 1',
@@ -45,13 +44,11 @@ describe('tests',()=>{
         index: 2,
       },
     ];
-    const deleteitem = jest.fn((index,tasks) => {
-      let task = tasks;
-     tasks.splice(index,1)
-      return tasks.length;
-    })
+    const deleteitem = jest.fn((index, tasks) => {
+      tasks.splice(index, 1);
+      // eslint-disable-next-line
+      return tasks.length; 
+    });
     expect(deleteitem(0, tasks)).toBe(1);
-   
-  })
-
-})
+  });
+});

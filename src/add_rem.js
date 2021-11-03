@@ -11,7 +11,7 @@ export function indexValue() {
 }
 
 // Add to List
-export default function addToDo(taskInput) {
+export function addToDo(taskInput) {
   if (taskInput === '') {
     return;
   }
