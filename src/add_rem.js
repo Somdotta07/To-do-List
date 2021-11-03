@@ -11,7 +11,7 @@ export function indexValue() {
 }
 
 // Add to List
-export function addToDo(taskInput) {
+export default function addToDo(taskInput) {
   if (taskInput === '') {
     return;
   }
@@ -66,3 +66,5 @@ export function removeLine(e) {
   textIcon.classList.add('none');
   trashIcon.classList.remove('none');
 }
+
+// export {}
