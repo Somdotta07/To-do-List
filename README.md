@@ -1,11 +1,11 @@
 # To-do-list
 
 A simple yet powerful to-do list, inspired by the minimalist website.
-![image](https://user-images.githubusercontent.com/84907743/138916952-4af23a3e-0b34-47b7-ba59-f72aed7bfde0.png)
+![image](https://user-images.githubusercontent.com/84907743/138916952-4af23a3e-0b34-47b7-ba59-f72aed7bfde0.png)![image](https://user-images.githubusercontent.com/84907743/140024923-fe4a3c0f-16ef-4c33-be6e-98e5f7d9d50e.png)
 
 ## Live Demo
 
-[Live Demo Link]( https://somdotta07.github.io/To-do-List/)
+[Live Demo]( https://somdotta07.github.io/To-do-List/)
 
 ## Built With
 
