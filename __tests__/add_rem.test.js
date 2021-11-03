@@ -48,7 +48,6 @@ describe('tests', () => {
       tasks.splice(index, 1);
       // eslint-disable-next-line
       return tasks.length; 
-      //return
     });
     expect(deleteitem(0, tasks)).toBe(1);
   });
