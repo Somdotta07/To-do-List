@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
-import addToDo from '../src/add_rem.js';
+import {addToDo,deleteItem} from '../src/add_rem.js';
 describe('tests',()=>{
-  test('Test the function', () => {
+  test('add the task', () => {
     // const taskList = [];
     // Arrange
     const taskList = [
@@ -32,4 +32,26 @@ describe('tests',()=>{
     // Act
     expect(addToDoMocked(taskList, 'New Task')).toBe(3);
   })
+  test('delteitem',() =>{
+    const tasks = [
+      {
+        description: 'Task 1',
+        completed: false,
+        index: 1,
+      },
+      {
+        description: 'Task 2',
+        completed: false,
+        index: 2,
+      },
+    ];
+    const deleteitem = jest.fn((index,tasks) => {
+      let task = tasks;
+     tasks.splice(index,1)
+      return tasks.length;
+    })
+    expect(deleteitem(0, tasks)).toBe(1);
+   
+  })
+
 })
