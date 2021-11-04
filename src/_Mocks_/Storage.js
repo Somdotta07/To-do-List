@@ -16,6 +16,6 @@ const addTOLocalStorage = (taskName, task) => {
   tasks = [...task];
 };
 
-// const getFromLocalStorage = (taskName) => tasks;
+const getFromLocalStorage = (taskFromLocal) => tasks;
 
 export default { addTOLocalStorage, getFromLocalStorage };
