@@ -1,17 +1,8 @@
 import { addTOLocalStorage, getFromLocalStorage } from './storage.js';
 
-export default function interactive(event) {
+export default function interactive(index, checked) {
   const task = getFromLocalStorage('task');
-  const text = event.currentTarget.nextElementSibling;
-  const toDos = task.filter((task) => task.description === text.textContent)[0];
-  const id = task.indexOf(toDos);
-
-  task[id].completed = event.target.checked;
-  if (event.target.checked) {
-    text.classList.add('linethrough');
-  } else {
-    text.classList.remove('linethrough');
-  }
-
+  task[index].completed = checked;
   addTOLocalStorage('task', task);
+  return task;
 }
