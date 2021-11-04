@@ -1,7 +1,5 @@
-
 describe('tests', () => {
   test('add the task', () => {
-    // const taskList = [];
     // Arrange
     const taskList = [
       {
