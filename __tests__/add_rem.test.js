@@ -1,5 +1,3 @@
-// import { completeToDo } from '../src/add_rem';
-
 /* eslint-disable linebreak-style */
 describe('tests', () => {
   test('add the task', () => {
