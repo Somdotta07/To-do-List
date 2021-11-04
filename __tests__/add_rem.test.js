@@ -1,4 +1,7 @@
 describe('tests', () => {
+  const addTOLocalStorage = (taskName, task) => {
+    JSON.stringify(task);
+  };
   test('add the task', () => {
     // Arrange
     const taskList = [
@@ -24,8 +27,10 @@ describe('tests', () => {
         index: taskList.length + 1,
       };
       taskList.push(taskElement);
+      addTOLocalStorage(taskList);
       // eslint-disable-next-line
       return taskList.length; 
+
     });
     // Act
     expect(addToDoMocked(taskList, 'New Task')).toBe(3);
@@ -45,6 +50,7 @@ describe('tests', () => {
     ];
     const deleteitem = jest.fn((index, tasks) => {
       tasks.splice(index, 1);
+      addTOLocalStorage(tasks);
       // eslint-disable-next-line
       return tasks.length; 
     });
@@ -69,6 +75,7 @@ describe('tests', () => {
         return;
       }
       taskInput[indexx].description = inpp;
+      addTOLocalStorage(tasks);
       // eslint-disable-next-line
       return tasks;
     });
@@ -110,6 +117,7 @@ describe('tests', () => {
       toremove.forEach((element) => {
         tasklist = tasklist.filter((item) => item.index !== element);
       });
+      addTOLocalStorage(tasks);
       return tasklist.length;
     });
     expect(cleartasks(tasks, removers)).toBe(4);
@@ -133,6 +141,7 @@ describe('tests', () => {
       if (taskList[index].completed === true) {
         ischeckedd = true;
       }
+      addTOLocalStorage(taskList);
       return ischeckedd;
     };
     expect(isChecked(1, tasks)).toBe(true);
