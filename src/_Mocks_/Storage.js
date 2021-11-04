@@ -1,21 +1,12 @@
-/* eslint-disable linebreak-style */
-let tasks = [
-  {
-    description: 'Task 1',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Task 2',
-    completed: false,
-    index: 2,
-  },
-];
-
-const addTOLocalStorage = (taskName, task) => {
-  tasks = [...task];
+export const addTOLocalStorage = (taskName, task) => {
+  const str = JSON.stringify(task);
+  localStorage.setItem(taskName, str);
 };
 
-const getFromLocalStorage = (taskFromLocal) => tasks;
+export const getFromLocalStorage = (taskName) => {
+  if (localStorage.getItem(taskName) == null) {
+    return null;
+  } return JSON.parse(localStorage.getItem(taskName));
+};
 
-export default { addTOLocalStorage, getFromLocalStorage };
+// export  { addTOLocalStorage, getFromLocalStorage };
