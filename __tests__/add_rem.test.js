@@ -93,10 +93,32 @@ describe('tests', () => {
         completed: true,
         index: 2,
       },
+      {
+        description: 'Task 3',
+        completed: true,
+        index: 3,
+      },
+      {
+        description: 'Task 4',
+        completed: true,
+        index: 4,
+      },
+      {
+        description: 'Task 5',
+        completed: true,
+        index: 5,
+      },
     ];
     // const newArr = completeToDo();
-    const filteredArr = tasks.filter((tasks) => !tasks.completed);
-    expect(filteredArr).toHaveLength(1);
+    const removers = [0,2];
+    const cleartasks = jest.fn((tasklist,toremove) => {
+      toremove.forEach((element) => {
+      tasklist =  tasklist.filter(item => item.index !== element)
+      });
+      return tasklist.length
+    })
+    //const filteredArr = tasks.filter((tasks) => !tasks.completed);
+    expect(cleartasks(tasks,removers)).toBe(4);
   });
   // Complete true or false
   // test(' Complete task true or false', () => {
