@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+
 describe('tests', () => {
   test('add the task', () => {
     // const taskList = [];
@@ -114,7 +114,6 @@ describe('tests', () => {
       });
       return tasklist.length;
     });
-    // const filteredArr = tasks.filter((tasks) => !tasks.completed);
     expect(cleartasks(tasks, removers)).toBe(4);
   });
   // Complete true or false
