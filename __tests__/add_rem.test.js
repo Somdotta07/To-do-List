@@ -101,7 +101,7 @@ describe('tests', () => {
       },
       {
         description: 'Task 5',
-        completed: true,
+        completed: false,
         index: 5,
       },
     ];
