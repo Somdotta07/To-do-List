@@ -1,4 +1,4 @@
-import { completeToDo } from '../src/add_rem';
+// import { completeToDo } from '../src/add_rem';
 
 /* eslint-disable linebreak-style */
 describe('tests', () => {
@@ -110,15 +110,15 @@ describe('tests', () => {
       },
     ];
     // const newArr = completeToDo();
-    const removers = [0,2];
-    const cleartasks = jest.fn((tasklist,toremove) => {
+    const removers = [0, 2];
+    const cleartasks = jest.fn((tasklist, toremove) => {
       toremove.forEach((element) => {
-      tasklist =  tasklist.filter(item => item.index !== element)
+        tasklist = tasklist.filter((item) => item.index !== element);
       });
-      return tasklist.length
-    })
-    //const filteredArr = tasks.filter((tasks) => !tasks.completed);
-    expect(cleartasks(tasks,removers)).toBe(4);
+      return tasklist.length;
+    });
+    // const filteredArr = tasks.filter((tasks) => !tasks.completed);
+    expect(cleartasks(tasks, removers)).toBe(4);
   });
   // Complete true or false
   // test(' Complete task true or false', () => {
