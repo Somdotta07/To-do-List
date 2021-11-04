@@ -1,5 +1,3 @@
-// import { completeToDo } from '../src/add_rem';
-
 /* eslint-disable linebreak-style */
 describe('tests', () => {
   test('add the task', () => {
@@ -109,7 +107,6 @@ describe('tests', () => {
         index: 5,
       },
     ];
-    // const newArr = completeToDo();
     const removers = [0, 2];
     const cleartasks = jest.fn((tasklist, toremove) => {
       toremove.forEach((element) => {
@@ -121,7 +118,26 @@ describe('tests', () => {
     expect(cleartasks(tasks, removers)).toBe(4);
   });
   // Complete true or false
-  // test(' Complete task true or false', () => {
-
-  // });
+  test(' Complete task true or false', () => {
+    const tasks = [
+      {
+        description: 'Task 1',
+        completed: false,
+        index: 1,
+      },
+      {
+        description: 'Task 2',
+        completed: true,
+        index: 2,
+      },
+    ];
+    const isChecked = (index, taskList) => {
+      let ischeckedd = false;
+      if (taskList[index].completed === true) {
+        ischeckedd = true;
+      }
+      return ischeckedd;
+    };
+    expect(isChecked(1, tasks)).toBe(true);
+  });
 });

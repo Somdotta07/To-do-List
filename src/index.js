@@ -35,7 +35,15 @@ const getList = () => {
     const checkBox = document.createElement('input');
     checkBox.setAttribute('type', 'checkbox');
     checkBox.checked = task[i].completed;
-    checkBox.addEventListener('change', interactive);
+    checkBox.addEventListener('change', (event) => {
+      const text = event.currentTarget.nextElementSibling;
+      interactive(i, event.target.checked);
+      if (event.target.checked) {
+        text.classList.add('linethrough');
+      } else {
+        text.classList.remove('linethrough');
+      }
+    });
     listContainer.appendChild(checkBox);
     // Text item
     const description = document.createElement('p');
