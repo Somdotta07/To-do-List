@@ -29,11 +29,12 @@ export function addToDo(taskInput) {
 // Edit the Text
 export function editText(taskInput, index) {
   if (taskInput === '') {
-    return;
+    return getFromLocalStorage('task');
   }
   const task = getFromLocalStorage('task');
   task[index].description = taskInput;
   addTOLocalStorage('task', task);
+  return task[index];
 }
 // Clear complete button
 
