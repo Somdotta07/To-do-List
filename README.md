@@ -16,7 +16,7 @@ A simple yet powerful to-do list, inspired by the minimalist website.
 
 ## Project requirements
 
-- Set up a new project with webpack that is based on the webpack exercise you have already completed.
+- Set up a new project with webpack 
 - Create an index.html file and write your HTML markup here. Create an empty To Do List placeholder (`<div>` or `<ul>` element). The index.html file must be set as a template using the HTML Webpack Plugin.
 - Create an index.js file and set an array of some simple to do tasks (array of objects). Each task object should contain three keys:
   - description [string].
